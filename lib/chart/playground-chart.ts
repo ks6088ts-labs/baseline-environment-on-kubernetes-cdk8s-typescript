@@ -1,5 +1,5 @@
-import { Construct } from "constructs";
-import { Chart, ChartProps } from "cdk8s";
+import { Construct } from 'constructs';
+import { Chart, ChartProps } from 'cdk8s';
 
 export interface PlaygroundChartProps extends ChartProps {}
 
