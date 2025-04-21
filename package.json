@@ -7,11 +7,11 @@
   "private": true,
   "scripts": {
     "import": "cdk8s import",
-    "synth": "cdk8s synth",
+    "synth": "cdk8s synth --output=cdk8s.out",
     "compile": "tsc --build",
     "watch": "tsc --build -w",
     "test": "jest",
-    "build": "pnpm run compile && pnpm run test && pnpm run synth",
+    "build": "pnpm run compile && pnpm run test --updateSnapshot && pnpm run synth",
     "upgrade": "pnpm i cdk8s@latest cdk8s-cli@latest",
     "upgrade:next": "pnpm i cdk8s@next cdk8s-cli@next"
   },
