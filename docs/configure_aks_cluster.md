@@ -16,7 +16,7 @@ az aks show \
   --resource-group $RESOURCE_GROUP_NAME \
   --query powerState.code
 
-# (Optional) stop the AKS cluster
+# (Optional) start the AKS cluster
 az aks start \
   --name $CLUSTER_NAME \
   --resource-group $RESOURCE_GROUP_NAME \
