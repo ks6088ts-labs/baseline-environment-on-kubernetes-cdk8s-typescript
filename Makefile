@@ -47,10 +47,6 @@ synth: ## synthesize the given charts
 .PHONY: ci-test
 ci-test: install-deps-dev lint build test synth ## run CI test
 
-.PHONY: update
-update: ## update dependencies
-	pnpm upgrade
-
 .PHONY: deploy
 deploy: ## apply the given charts
 	kubectl apply -f $(OUTPUT_DIR)/$(MANIFEST).k8s.yaml
@@ -58,3 +54,8 @@ deploy: ## apply the given charts
 .PHONY: destroy
 destroy: ## destroy the given stacks
 	kubectl delete -f $(OUTPUT_DIR)/$(MANIFEST).k8s.yaml
+
+.PHONY: update
+update: ## update dependencies
+	pnpm update --latest
+	pnpm jest --updateSnapshot

@@ -13,23 +13,21 @@
     "compile": "tsc --build",
     "watch": "tsc --build -w",
     "test": "jest",
-    "build": "pnpm run compile && pnpm run test --updateSnapshot && pnpm run synth",
-    "upgrade": "pnpm i cdk8s@latest cdk8s-cli@latest",
-    "upgrade:next": "pnpm i cdk8s@next cdk8s-cli@next"
+    "build": "pnpm run compile"
   },
   "dependencies": {
-    "cdk8s": "^2.69.63",
+    "cdk8s": "^2.69.64",
     "cdk8s-plus-28": "^2.5.6",
     "constructs": "^10.4.2"
   },
   "devDependencies": {
-    "@types/jest": "^27.5.2",
+    "@types/jest": "^29.5.14",
     "@types/node": "^22.14.1",
-    "cdk8s-cli": "^2.200.47",
-    "jest": "^27.5.1",
+    "cdk8s-cli": "^2.200.48",
+    "jest": "^29.7.0",
     "prettier": "^3.5.3",
-    "ts-jest": "^27.1.5",
+    "ts-jest": "^29.3.2",
     "ts-node": "^10.9.2",
-    "typescript": "^4.9.5"
+    "typescript": "^5.8.3"
   }
 }
