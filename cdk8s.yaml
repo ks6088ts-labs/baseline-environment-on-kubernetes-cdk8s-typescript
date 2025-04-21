@@ -1,4 +1,4 @@
 language: typescript
-app: npx ts-node main.ts
+app: npx ts-node bin/main.ts
 imports:
   - k8s
