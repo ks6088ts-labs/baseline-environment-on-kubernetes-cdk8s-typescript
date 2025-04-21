@@ -6,6 +6,8 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
+    "fix:prettier": "prettier --write bin lib test",
+    "lint:prettier": "prettier --check bin lib test",
     "import": "cdk8s import",
     "synth": "cdk8s synth --output=cdk8s.out",
     "compile": "tsc --build",
@@ -25,6 +27,7 @@
     "@types/node": "^14.18.63",
     "cdk8s-cli": "^2.200.47",
     "jest": "^27.5.1",
+    "prettier": "^3.5.3",
     "ts-jest": "^27.1.5",
     "ts-node": "^10.9.2",
     "typescript": "^4.9.5"
