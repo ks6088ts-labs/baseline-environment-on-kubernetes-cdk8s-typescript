@@ -15,4 +15,10 @@ Baseline Environment on Kubernetes in CDK for Kubernetes using TypeScript
 ```shell
 # Run CI test
 make ci-test
+
+# Deploy to Kubernetes
+make deploy MANIFEST=dev-playground-chart
+
+# Delete from Kubernetes
+make destroy MANIFEST=dev-playground-chart
 ```

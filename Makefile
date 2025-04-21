@@ -3,12 +3,7 @@ GIT_REVISION ?= $(shell git rev-parse --short HEAD)
 GIT_TAG ?= $(shell git describe --tags --abbrev=0 --always | sed -e s/v//g)
 
 OUTPUT_DIR ?= $(PWD)/cdk8s.out
-CHARTS ?= \
-	Dev-AzureadStack \
-	Dev-BackendStack \
-	Dev-GithubStack \
-	Dev-PlaygroundStack \
-	Dev-ServicePrincipalStack
+MANIFEST ?= dev-playground-chart
 
 .PHONY: help
 help:
@@ -55,3 +50,11 @@ ci-test: install-deps-dev lint build test synth ## run CI test
 .PHONY: update
 update: ## update dependencies
 	pnpm upgrade
+
+.PHONY: deploy
+deploy: ## apply the given charts
+	kubectl apply -f $(OUTPUT_DIR)/$(MANIFEST).k8s.yaml
+
+.PHONY: destroy
+destroy: ## destroy the given stacks
+	kubectl delete -f $(OUTPUT_DIR)/$(MANIFEST).k8s.yaml
