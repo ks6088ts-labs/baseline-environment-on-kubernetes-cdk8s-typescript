@@ -1,10 +1,8 @@
 import { Construct } from 'constructs';
-import { KubeDeployment, Container } from '../../imports/k8s';
+import { KubeDeployment, Quantity } from '../../imports/k8s';
 
 export interface HelloProps {
-  replicas: number;
-  appLabel: string;
-  containers: Container[];
+  image: string;
 }
 
 export class Hello extends Construct {
@@ -14,12 +12,34 @@ export class Hello extends Construct {
     // Define a Kubernetes Deployment
     new KubeDeployment(this, 'hello-deployment', {
       spec: {
-        replicas: props.replicas,
-        selector: { matchLabels: { app: props.appLabel } },
+        replicas: 1,
+        selector: { matchLabels: { app: 'hello' } },
         template: {
-          metadata: { labels: { app: props.appLabel } },
+          metadata: { labels: { app: 'hello' } },
           spec: {
-            containers: props.containers,
+            containers: [
+              {
+                name: 'hello',
+                image: props.image,
+                ports: [
+                  {
+                    containerPort: 80,
+                    name: 'http',
+                    protocol: 'TCP',
+                  },
+                ],
+                resources: {
+                  limits: {
+                    cpu: Quantity.fromString('100m'),
+                    memory: Quantity.fromString('128Mi'),
+                  },
+                  requests: {
+                    cpu: Quantity.fromString('100m'),
+                    memory: Quantity.fromString('128Mi'),
+                  },
+                },
+              },
+            ],
           },
         },
       },
