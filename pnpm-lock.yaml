@@ -11,9 +11,9 @@ importers:
       cdk8s:
         specifier: ^2.69.64
         version: 2.69.64(constructs@10.4.2)
-      cdk8s-plus-28:
-        specifier: ^2.5.6
-        version: 2.5.6(cdk8s@2.69.64(constructs@10.4.2))(constructs@10.4.2)
+      cdk8s-plus-32:
+        specifier: ^2.0.12
+        version: 2.0.12(cdk8s@2.69.64(constructs@10.4.2))(constructs@10.4.2)
       constructs:
         specifier: ^10.4.2
         version: 10.4.2
@@ -25,8 +25,8 @@ importers:
         specifier: ^22.14.1
         version: 22.14.1
       cdk8s-cli:
-        specifier: ^2.200.48
-        version: 2.200.48
+        specifier: ^2.200.49
+        version: 2.200.49
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@22.14.1)(ts-node@10.9.2(@types/node@22.14.1)(typescript@5.8.3))
@@ -517,13 +517,22 @@ packages:
     resolution: {integrity: sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==}
     engines: {node: '>= 0.8.0'}
 
-  cdk8s-cli@2.200.48:
-    resolution: {integrity: sha512-eQ9pcK/a0PtFCvRFgNwk97KtK3EWMzThLWzRhtOQA0i6ScoZAhuexaeN5vbFYvYBLpE++4iZ2XjDNemSIeIlGg==}
+  cdk8s-cli@2.200.49:
+    resolution: {integrity: sha512-wIto0hVDJTQUngi/AAKOfHuF0iEV3V3cmfx/zpss3Qtbb5Pi5fBJWUQ/FzBuWYlfA78wbEBFbDtR5cBTGj5BwQ==}
     engines: {node: '>= 16.20.0'}
     hasBin: true
 
   cdk8s-plus-28@2.5.6:
     resolution: {integrity: sha512-ghANDg6Qmsr3vQlEig7ZDWD03ZPXkjae7ks0HaRy2clIW553mCSTjcZirvuJGaIHDN2OV2S1dLXjdIYuMq3qOA==}
+    engines: {node: '>= 16.20.0'}
+    peerDependencies:
+      cdk8s: ^2.68.11
+      constructs: ^10.3.0
+    bundledDependencies:
+      - minimatch
+
+  cdk8s-plus-32@2.0.12:
+    resolution: {integrity: sha512-9kMEz3mSrPWKRYosCmw68HE+up/u3LXej2QtrpU60ktIL1c9HUdYy22bBgcMEVgi8Q/7JoXb7OMyKhUsIyNmXg==}
     engines: {node: '>= 16.20.0'}
     peerDependencies:
       cdk8s: ^2.68.11
@@ -1524,8 +1533,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.9.0-dev.20250421:
-    resolution: {integrity: sha512-FdSThloQniJuK/XHbAOH0K60ujWlZIylhmHj8RHO+JfuWIBIJgE6Uxj8psM0bxE0vWEa5lhsQHASZhHRg8ZHnw==}
+  typescript@5.9.0-dev.20250422:
+    resolution: {integrity: sha512-nhqzYEg74esioK1dt0zLZBEdpDv1VXZqX9qWe9qFi3pkYjXr2Rok3MTV0+CEDc7DIL6sKeJ5YBRuePpIsSmmfA==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2259,7 +2268,7 @@ snapshots:
 
   case@1.6.3: {}
 
-  cdk8s-cli@2.200.48:
+  cdk8s-cli@2.200.49:
     dependencies:
       '@types/node': 16.18.126
       ajv: 8.17.1
@@ -2282,6 +2291,11 @@ snapshots:
       - supports-color
 
   cdk8s-plus-28@2.5.6(cdk8s@2.69.64(constructs@10.4.2))(constructs@10.4.2):
+    dependencies:
+      cdk8s: 2.69.64(constructs@10.4.2)
+      constructs: 10.4.2
+
+  cdk8s-plus-32@2.0.12(cdk8s@2.69.64(constructs@10.4.2))(constructs@10.4.2):
     dependencies:
       cdk8s: 2.69.64(constructs@10.4.2)
       constructs: 10.4.2
@@ -2407,7 +2421,7 @@ snapshots:
     dependencies:
       semver: 7.7.1
       shelljs: 0.8.5
-      typescript: 5.9.0-dev.20250421
+      typescript: 5.9.0-dev.20250422
 
   ejs@3.1.10:
     dependencies:
@@ -3433,7 +3447,7 @@ snapshots:
 
   typescript@5.8.3: {}
 
-  typescript@5.9.0-dev.20250421: {}
+  typescript@5.9.0-dev.20250422: {}
 
   undici-types@6.21.0: {}
 
