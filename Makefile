@@ -42,7 +42,7 @@ build: ## build applications
 
 .PHONY: synth
 synth: ## synthesize the given charts
-	cdk8s synth --output=cdk8s.out
+	cdk8s synth --output=$(OUTPUT_DIR)
 
 .PHONY: ci-test
 ci-test: install-deps-dev lint build test synth ## run CI test
