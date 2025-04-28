@@ -8,6 +8,7 @@ export interface PlaygroundChartProps extends ChartProps {
     image: string;
   };
   argocd?: {};
+  grafana?: {};
 }
 
 export const devPlaygroundChartProps: PlaygroundChartProps = {
@@ -15,6 +16,7 @@ export const devPlaygroundChartProps: PlaygroundChartProps = {
     image: 'nginx:latest',
   },
   argocd: {},
+  grafana: {},
 };
 
 export const prodPlaygroundChartProps: PlaygroundChartProps = {};
@@ -41,6 +43,21 @@ export class PlaygroundChart extends Chart {
         namespace: namespace.name,
         repo: 'https://argoproj.github.io/argo-helm',
         chart: 'argo-cd',
+      });
+    }
+
+    if (props.grafana) {
+      const name = 'grafana';
+      const namespace = new kplus.Namespace(this, `namespace-${name}`, {
+        metadata: {
+          name: name,
+        },
+      });
+      new Helm(this, `helm-${name}`, {
+        releaseName: name,
+        namespace: namespace.name,
+        repo: 'https://grafana.github.io/helm-charts',
+        chart: 'grafana',
       });
     }
   }

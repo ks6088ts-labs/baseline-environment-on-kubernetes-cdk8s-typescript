@@ -12,3 +12,15 @@ argocd admin initial-password -n $NAMESPACE
 # login to Argo CD
 argocd login localhost:8080 --username admin --insecure
 ```
+
+## [Grafana](https://github.com/grafana/helm-charts)
+
+```shell
+NAMESPACE=grafana
+
+k -n $NAMESPACE port-forward service/grafana 8080:80
+
+# https://grafana.com/docs/grafana/latest/setup-grafana/installation/helm/#access-grafana
+# retrieve the admin password
+k -n $NAMESPACE get secret grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+```
