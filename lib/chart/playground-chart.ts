@@ -10,6 +10,7 @@ export interface PlaygroundChartProps extends ChartProps {
   argocd?: {};
   grafana?: {};
   kubecost?: {};
+  openwebui?: {};
 }
 
 export const devPlaygroundChartProps: PlaygroundChartProps = {
@@ -19,6 +20,7 @@ export const devPlaygroundChartProps: PlaygroundChartProps = {
   argocd: {},
   grafana: {},
   kubecost: {},
+  openwebui: {},
 };
 
 export const prodPlaygroundChartProps: PlaygroundChartProps = {};
@@ -51,6 +53,12 @@ export class PlaygroundChart extends Chart {
         enabled: !!props.kubecost,
         repo: 'https://kubecost.github.io/cost-analyzer/',
         chart: 'cost-analyzer',
+      },
+      {
+        name: 'openwebui',
+        enabled: !!props.openwebui,
+        repo: 'https://helm.openwebui.com/',
+        chart: 'open-webui',
       },
     ];
 

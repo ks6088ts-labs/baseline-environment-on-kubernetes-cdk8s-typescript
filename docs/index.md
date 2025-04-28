@@ -32,3 +32,11 @@ NAMESPACE=kubecost
 
 k -n $NAMESPACE port-forward svc/kubecost-cost-analyzer 9090:9090
 ```
+
+## [Open WebUI](https://github.com/open-webui/helm-charts)
+
+```shell
+NAMESPACE=openwebui
+
+k -n $NAMESPACE port-forward service/open-webui 8080:80
+```
