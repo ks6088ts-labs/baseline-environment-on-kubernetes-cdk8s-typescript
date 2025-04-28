@@ -31,34 +31,40 @@ export class PlaygroundChart extends Chart {
       });
     }
 
-    if (props.argocd) {
-      const name = 'argocd';
-      const namespace = new kplus.Namespace(this, `namespace-${name}`, {
-        metadata: {
-          name: name,
-        },
-      });
-      new Helm(this, `helm-${name}`, {
-        releaseName: name,
-        namespace: namespace.name,
+    const helmCharts = [
+      {
+        name: 'argocd',
+        enabled: !!props.argocd,
         repo: 'https://argoproj.github.io/argo-helm',
         chart: 'argo-cd',
-      });
-    }
-
-    if (props.grafana) {
-      const name = 'grafana';
-      const namespace = new kplus.Namespace(this, `namespace-${name}`, {
-        metadata: {
-          name: name,
-        },
-      });
-      new Helm(this, `helm-${name}`, {
-        releaseName: name,
-        namespace: namespace.name,
+      },
+      {
+        name: 'grafana',
+        enabled: !!props.grafana,
         repo: 'https://grafana.github.io/helm-charts',
         chart: 'grafana',
-      });
+      },
+    ];
+
+    // Install enabled Helm charts
+    for (const chartConfig of helmCharts) {
+      if (chartConfig.enabled) {
+        const name = chartConfig.name;
+        // Create namespace for the chart
+        const namespace = new kplus.Namespace(this, `namespace-${name}`, {
+          metadata: {
+            name: name,
+          },
+        });
+
+        // Install Helm chart
+        new Helm(this, `helm-${name}`, {
+          releaseName: name,
+          namespace: namespace.name,
+          repo: chartConfig.repo,
+          chart: chartConfig.chart,
+        });
+      }
     }
   }
 }
