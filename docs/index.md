@@ -24,3 +24,11 @@ k -n $NAMESPACE port-forward service/grafana 8080:80
 # retrieve the admin password
 k -n $NAMESPACE get secret grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 ```
+
+## [Kubecost](https://github.com/kubecost/cost-analyzer-helm-chart)
+
+```shell
+NAMESPACE=kubecost
+
+k -n $NAMESPACE port-forward svc/kubecost-cost-analyzer 9090:9090
+```

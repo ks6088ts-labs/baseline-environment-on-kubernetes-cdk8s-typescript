@@ -9,6 +9,7 @@ export interface PlaygroundChartProps extends ChartProps {
   };
   argocd?: {};
   grafana?: {};
+  kubecost?: {};
 }
 
 export const devPlaygroundChartProps: PlaygroundChartProps = {
@@ -17,6 +18,7 @@ export const devPlaygroundChartProps: PlaygroundChartProps = {
   },
   argocd: {},
   grafana: {},
+  kubecost: {},
 };
 
 export const prodPlaygroundChartProps: PlaygroundChartProps = {};
@@ -43,6 +45,12 @@ export class PlaygroundChart extends Chart {
         enabled: !!props.grafana,
         repo: 'https://grafana.github.io/helm-charts',
         chart: 'grafana',
+      },
+      {
+        name: 'kubecost',
+        enabled: !!props.kubecost,
+        repo: 'https://kubecost.github.io/cost-analyzer/',
+        chart: 'cost-analyzer',
       },
     ];
 
