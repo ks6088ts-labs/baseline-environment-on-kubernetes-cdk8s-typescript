@@ -25,8 +25,8 @@ importers:
         specifier: ^22.15.3
         version: 22.15.3
       cdk8s-cli:
-        specifier: ^2.200.54
-        version: 2.200.54
+        specifier: ^2.200.60
+        version: 2.200.60
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@22.15.3)(ts-node@10.9.2(@types/node@22.15.3)(typescript@5.8.3))
@@ -517,8 +517,8 @@ packages:
     resolution: {integrity: sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==}
     engines: {node: '>= 0.8.0'}
 
-  cdk8s-cli@2.200.54:
-    resolution: {integrity: sha512-ehzyGb6B4yr2973En6k6UN++APK3Zgwgtx0Zo9vgemH4NaJZBU4bfNqytp2Kn1IFgS2lTmafkbgAY6nNsmXiZA==}
+  cdk8s-cli@2.200.60:
+    resolution: {integrity: sha512-Y2GCEy3MlRqpCeKRL4LJYaChUyKR1h70AWn1hQMseO26TNBRh672Fb9AiwOQ5fEUJVN84wjugdT2dfcLk3tvfA==}
     engines: {node: '>= 16.20.0'}
     hasBin: true
 
@@ -542,6 +542,16 @@ packages:
 
   cdk8s@2.69.64:
     resolution: {integrity: sha512-QBMVYhOeGfn+sh6VDwsaRGxd0DVpF2+Xowwjxe2x1fqWo/kwOHC+SLMrQR7bAxCJJLaC3ggIs44DPxZisGeZqg==}
+    engines: {node: '>= 16.20.0'}
+    peerDependencies:
+      constructs: ^10
+    bundledDependencies:
+      - fast-json-patch
+      - follow-redirects
+      - yaml
+
+  cdk8s@2.69.65:
+    resolution: {integrity: sha512-fo5bDbJS6YuGqVTwTODgkath594mHbd4S4Qn2K5mTmEIlKsYkOauzZLrjaaQ+hUMKvBsZMorusDyWsHz+GU1/w==}
     engines: {node: '>= 16.20.0'}
     peerDependencies:
       constructs: ^10
@@ -1075,8 +1085,8 @@ packages:
     engines: {node: '>= 14.17.0'}
     hasBin: true
 
-  jsii-rosetta@5.8.6:
-    resolution: {integrity: sha512-Hc3ISSZPODFjuS8SFIPnr2klwWgi6VMwE8YgGNAAVVInIrAqw3/SlfdGKJBcGEMLEPBAXLTu8yPSWbD7Gsu/zw==}
+  jsii-rosetta@5.8.7:
+    resolution: {integrity: sha512-8Ecl+BcCUXgRvqx9wqnVRqTlADuwdjS35sYSrKuXyAyLntdwlqn1NP3kMLLn20PBGjTkeqbCt8VmRox4hBASNA==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
 
@@ -1089,8 +1099,8 @@ packages:
     engines: {node: '>= 18.12.0'}
     hasBin: true
 
-  jsii@5.8.7:
-    resolution: {integrity: sha512-q0XwDDM7CIQUdgB7yhUtTA8gh0XZogRobBD8ovG+PUw5eYLco7KTAG1NoW2NktxX/YiaibDALfFrsV0Pb1S4BQ==}
+  jsii@5.8.8:
+    resolution: {integrity: sha512-TSgHsnYNJq1W5ILdIE3tUJ3lLjSbp2VhDolBZ4SU7IYfEbW1dg9kpFLe7J/XPgQXfHlf5eUzOPVXyV/9rXft1w==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
 
@@ -1533,8 +1543,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.9.0-dev.20250427:
-    resolution: {integrity: sha512-rD2EPLQ8g8bpBtnveMTgGFAuuEujcrirMAd8ry0v4KKrsJOppsaiLJm4kFPLjHcdMYfQ3LKyitwbB7H+T8A5CA==}
+  typescript@5.9.0-dev.20250504:
+    resolution: {integrity: sha512-tdJ5/k+fpLlZbGlvpY9BM54lLu4W7kSG42hKbZokiKM+IahMjv7JgLo3qb/vH0o0khhM9C6e7eES5Yh0Zewx8w==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2268,18 +2278,18 @@ snapshots:
 
   case@1.6.3: {}
 
-  cdk8s-cli@2.200.54:
+  cdk8s-cli@2.200.60:
     dependencies:
       '@types/node': 16.18.126
       ajv: 8.17.1
-      cdk8s: 2.69.64(constructs@10.4.2)
-      cdk8s-plus-28: 2.5.6(cdk8s@2.69.64(constructs@10.4.2))(constructs@10.4.2)
+      cdk8s: 2.69.65(constructs@10.4.2)
+      cdk8s-plus-28: 2.5.6(cdk8s@2.69.65(constructs@10.4.2))(constructs@10.4.2)
       codemaker: 1.111.0
       colors: 1.4.0
       constructs: 10.4.2
       fs-extra: 8.1.0
-      jsii-pacmak: 1.111.0(jsii-rosetta@5.8.6)
-      jsii-rosetta: 5.8.6
+      jsii-pacmak: 1.111.0(jsii-rosetta@5.8.7)
+      jsii-rosetta: 5.8.7
       jsii-srcmak: 0.1.1236
       json2jsii: 0.5.0
       semver: 7.7.1
@@ -2290,9 +2300,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  cdk8s-plus-28@2.5.6(cdk8s@2.69.64(constructs@10.4.2))(constructs@10.4.2):
+  cdk8s-plus-28@2.5.6(cdk8s@2.69.65(constructs@10.4.2))(constructs@10.4.2):
     dependencies:
-      cdk8s: 2.69.64(constructs@10.4.2)
+      cdk8s: 2.69.65(constructs@10.4.2)
       constructs: 10.4.2
 
   cdk8s-plus-32@2.0.12(cdk8s@2.69.64(constructs@10.4.2))(constructs@10.4.2):
@@ -2301,6 +2311,10 @@ snapshots:
       constructs: 10.4.2
 
   cdk8s@2.69.64(constructs@10.4.2):
+    dependencies:
+      constructs: 10.4.2
+
+  cdk8s@2.69.65(constructs@10.4.2):
     dependencies:
       constructs: 10.4.2
 
@@ -2421,7 +2435,7 @@ snapshots:
     dependencies:
       semver: 7.7.1
       shelljs: 0.8.5
-      typescript: 5.9.0-dev.20250427
+      typescript: 5.9.0-dev.20250504
 
   ejs@3.1.10:
     dependencies:
@@ -2971,7 +2985,7 @@ snapshots:
 
   jsesc@3.1.0: {}
 
-  jsii-pacmak@1.111.0(jsii-rosetta@5.8.6):
+  jsii-pacmak@1.111.0(jsii-rosetta@5.8.7):
     dependencies:
       '@jsii/check-node': 1.111.0
       '@jsii/spec': 1.111.0
@@ -2981,7 +2995,7 @@ snapshots:
       escape-string-regexp: 4.0.0
       fs-extra: 10.1.0
       jsii-reflect: 1.111.0
-      jsii-rosetta: 5.8.6
+      jsii-rosetta: 5.8.7
       semver: 7.7.1
       spdx-license-list: 6.10.0
       xmlbuilder: 15.1.1
@@ -2996,7 +3010,7 @@ snapshots:
       oo-ascii-tree: 1.111.0
       yargs: 16.2.0
 
-  jsii-rosetta@5.8.6:
+  jsii-rosetta@5.8.7:
     dependencies:
       '@jsii/check-node': 1.111.0
       '@jsii/spec': 1.111.0
@@ -3004,7 +3018,7 @@ snapshots:
       chalk: 4.1.2
       commonmark: 0.31.2
       fast-glob: 3.3.3
-      jsii: 5.8.7
+      jsii: 5.8.8
       semver: 7.7.1
       semver-intersect: 1.5.0
       stream-json: 1.9.1
@@ -3018,8 +3032,8 @@ snapshots:
     dependencies:
       fs-extra: 9.1.0
       jsii: 5.5.31
-      jsii-pacmak: 1.111.0(jsii-rosetta@5.8.6)
-      jsii-rosetta: 5.8.6
+      jsii-pacmak: 1.111.0(jsii-rosetta@5.8.7)
+      jsii-rosetta: 5.8.7
       ncp: 2.0.0
       yargs: 17.7.2
     transitivePeerDependencies:
@@ -3043,7 +3057,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  jsii@5.8.7:
+  jsii@5.8.8:
     dependencies:
       '@jsii/check-node': 1.111.0
       '@jsii/spec': 1.111.0
@@ -3447,7 +3461,7 @@ snapshots:
 
   typescript@5.8.3: {}
 
-  typescript@5.9.0-dev.20250427: {}
+  typescript@5.9.0-dev.20250504: {}
 
   undici-types@6.21.0: {}
 

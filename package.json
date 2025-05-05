@@ -23,7 +23,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "^22.15.3",
-    "cdk8s-cli": "^2.200.54",
+    "cdk8s-cli": "^2.200.60",
     "jest": "^29.7.0",
     "prettier": "^3.5.3",
     "ts-jest": "^29.3.2",
