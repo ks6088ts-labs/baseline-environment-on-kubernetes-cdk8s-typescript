@@ -12,8 +12,8 @@ importers:
         specifier: ^2.69.64
         version: 2.69.64(constructs@10.4.2)
       cdk8s-plus-32:
-        specifier: ^2.0.12
-        version: 2.0.12(cdk8s@2.69.64(constructs@10.4.2))(constructs@10.4.2)
+        specifier: ^2.0.13
+        version: 2.0.13(cdk8s@2.69.64(constructs@10.4.2))(constructs@10.4.2)
       constructs:
         specifier: ^10.4.2
         version: 10.4.2
@@ -531,8 +531,8 @@ packages:
     bundledDependencies:
       - minimatch
 
-  cdk8s-plus-32@2.0.12:
-    resolution: {integrity: sha512-9kMEz3mSrPWKRYosCmw68HE+up/u3LXej2QtrpU60ktIL1c9HUdYy22bBgcMEVgi8Q/7JoXb7OMyKhUsIyNmXg==}
+  cdk8s-plus-32@2.0.13:
+    resolution: {integrity: sha512-m9Ct7SnSjK6SRkMmpT/4S5hoFryhBCOGr+PYhliuPBmi1+h/IIGM3UHITXfFvf+F119nYvXVqAXwyoQH8dp6rQ==}
     engines: {node: '>= 16.20.0'}
     peerDependencies:
       cdk8s: ^2.68.11
@@ -1533,8 +1533,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.9.0-dev.20250427:
-    resolution: {integrity: sha512-rD2EPLQ8g8bpBtnveMTgGFAuuEujcrirMAd8ry0v4KKrsJOppsaiLJm4kFPLjHcdMYfQ3LKyitwbB7H+T8A5CA==}
+  typescript@5.9.0-dev.20250504:
+    resolution: {integrity: sha512-tdJ5/k+fpLlZbGlvpY9BM54lLu4W7kSG42hKbZokiKM+IahMjv7JgLo3qb/vH0o0khhM9C6e7eES5Yh0Zewx8w==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2295,7 +2295,7 @@ snapshots:
       cdk8s: 2.69.64(constructs@10.4.2)
       constructs: 10.4.2
 
-  cdk8s-plus-32@2.0.12(cdk8s@2.69.64(constructs@10.4.2))(constructs@10.4.2):
+  cdk8s-plus-32@2.0.13(cdk8s@2.69.64(constructs@10.4.2))(constructs@10.4.2):
     dependencies:
       cdk8s: 2.69.64(constructs@10.4.2)
       constructs: 10.4.2
@@ -2421,7 +2421,7 @@ snapshots:
     dependencies:
       semver: 7.7.1
       shelljs: 0.8.5
-      typescript: 5.9.0-dev.20250427
+      typescript: 5.9.0-dev.20250504
 
   ejs@3.1.10:
     dependencies:
@@ -3447,7 +3447,7 @@ snapshots:
 
   typescript@5.8.3: {}
 
-  typescript@5.9.0-dev.20250427: {}
+  typescript@5.9.0-dev.20250504: {}
 
   undici-types@6.21.0: {}
 

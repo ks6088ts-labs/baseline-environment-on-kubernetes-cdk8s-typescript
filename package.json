@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "cdk8s": "^2.69.64",
-    "cdk8s-plus-32": "^2.0.12",
+    "cdk8s-plus-32": "^2.0.13",
     "constructs": "^10.4.2"
   },
   "devDependencies": {
