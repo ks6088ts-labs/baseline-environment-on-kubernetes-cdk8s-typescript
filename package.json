@@ -16,7 +16,7 @@
     "build": "pnpm run compile"
   },
   "dependencies": {
-    "cdk8s": "^2.69.64",
+    "cdk8s": "^2.69.65",
     "cdk8s-plus-32": "^2.0.12",
     "constructs": "^10.4.2"
   },
