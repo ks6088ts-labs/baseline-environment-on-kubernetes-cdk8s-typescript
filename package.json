@@ -16,14 +16,14 @@
     "build": "pnpm run compile"
   },
   "dependencies": {
-    "cdk8s": "^2.69.64",
-    "cdk8s-plus-32": "^2.0.12",
+    "cdk8s": "^2.69.67",
+    "cdk8s-plus-32": "^2.1.1",
     "constructs": "^10.4.2"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.15.3",
-    "cdk8s-cli": "^2.200.54",
+    "@types/node": "^22.15.17",
+    "cdk8s-cli": "^2.200.66",
     "jest": "^29.7.0",
     "prettier": "^3.5.3",
     "ts-jest": "^29.3.2",
